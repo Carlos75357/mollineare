@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "mollinearelibrary:block/material_blocks/chromium_block"
+    }
+  }
+}

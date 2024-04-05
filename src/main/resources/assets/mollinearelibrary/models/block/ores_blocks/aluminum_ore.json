@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "mollinearelibrary:block/ores_blocks/aluminum_ore"
+  }
+}

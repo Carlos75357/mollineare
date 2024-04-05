@@ -1,33 +1,21 @@
 package dam.library.mollineare;
 
 import com.mojang.logging.LogUtils;
-import dam.library.mollineare.items.ModItems;
-import net.minecraft.client.Minecraft;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
+import dam.library.mollineare.blocks.MaterialBlocks;
+import dam.library.mollineare.blocks.OreBlocks;
+import dam.library.mollineare.items.IngotItems;
+import dam.library.mollineare.items.RawItems;
+import dam.library.mollineare.tabs.MollineareOresTab;
 import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.config.ModConfig;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -43,7 +31,11 @@ public class MollineareLibrary
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        ModItems.register(modEventBus);
+        MollineareOresTab.register(modEventBus);
+        RawItems.register(modEventBus);
+        IngotItems.register(modEventBus);
+        MaterialBlocks.register(modEventBus);
+        OreBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -60,8 +52,32 @@ public class MollineareLibrary
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.RAW_TIN);
+            event.accept(RawItems.RAW_TIN);
+            event.accept(RawItems.RAW_ZINC);
+            event.accept(RawItems.RAW_COBALT);
+            event.accept(RawItems.RAW_ALUMINUM);
+            event.accept(RawItems.RAW_TITANIUM);
+            event.accept(RawItems.RAW_CHROMIUM);
+            event.accept(IngotItems.TIN_INGOT);
+            event.accept(IngotItems.ZINC_INGOT);
+            event.accept(IngotItems.COBALT_INGOT);
+            event.accept(IngotItems.ALUMINUM_INGOT);
+            event.accept(IngotItems.TITANIUM_INGOT);
+            event.accept(IngotItems.CHROMIUM_INGOT);
+            event.accept(MaterialBlocks.TIN_BLOCK);
+            event.accept(MaterialBlocks.ZINC_BLOCK);
+            event.accept(MaterialBlocks.CHROMIUM_BLOCK);
+            event.accept(MaterialBlocks.COBALT_BLOCK);
+            event.accept(MaterialBlocks.ALUMINUM_BLOCK);
+            event.accept(MaterialBlocks.TITANIUM_BLOCK);
+            event.accept(OreBlocks.TIN_ORE);
+            event.accept(OreBlocks.ZINC_ORE);
+            event.accept(OreBlocks.CHROMIUM_ORE);
+            event.accept(OreBlocks.COBALT_ORE);
+            event.accept(OreBlocks.ALUMINUM_ORE);
+            event.accept(OreBlocks.TITANIUM_ORE);
         }
+
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

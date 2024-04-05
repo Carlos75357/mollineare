@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "mollinearelibrary:block/ores_blocks/chromium_ore"
+    }
+  }
+}

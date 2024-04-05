@@ -1,3 +1,38 @@
 {
-  "item.mollinearelibrary.tin": "Raw tin"
+  "item.mollinearelibrary.raw_items.raw_tin": "Raw Tin",
+  "item.mollinearelibrary.raw_items.raw_zinc": "Raw Zinc",
+  "item.mollinearelibrary.raw_items.raw_chromium": "Raw Chromium",
+  "item.mollinearelibrary.raw_items.raw_aluminum": "Raw Aluminum",
+  "item.mollinearelibrary.raw_items.raw_titanium": "Raw Titanium",
+  "item.mollinearelibrary.raw_items.raw_cobalt": "Raw Cobalt",
+
+  "item.mollinearelibrary.ingots.tin_ingot": "Tin Ingot",
+  "item.mollinearelibrary.ingots.zinc_ingot": "Zinc Ingot",
+  "item.mollinearelibrary.ingots.chromium_ingot": "Chromium Ingot",
+  "item.mollinearelibrary.ingots.aluminum_ingot": "Aluminum Ingot",
+  "item.mollinearelibrary.ingots.titanium_ingot": "Titanium Ingot",
+  "item.mollinearelibrary.ingots.cobalt_ingot": "Cobalt Ingot",
+
+  "item.mollinearelibrary.blocks.tin_block": "Tin Block",
+  "item.mollinearelibrary.blocks.zinc_block": "Zinc Block",
+  "item.mollinearelibrary.blocks.chromium_block": "Chromium Block",
+  "item.mollinearelibrary.blocks.aluminum_block": "Aluminum Block",
+  "item.mollinearelibrary.blocks.titanium_block": "Titanium Block",
+  "item.mollinearelibrary.blocks.cobalt_block": "Cobalt Block",
+
+  "block.mollinearelibrary.chromium_block": "Chromium Block",
+  "block.mollinearelibrary.zinc_block": "Zinc Block",
+  "block.mollinearelibrary.tin_block": "Tin Block",
+  "block.mollinearelibrary.aluminum_block": "Aluminum Block",
+  "block.mollinearelibrary.titanium_block": "Titanium Block",
+  "block.mollinearelibrary.cobalt_block": "Cobalt Block",
+
+  "block.mollinearelibrary.tin_ore": "Tin Ore",
+  "block.mollinearelibrary.zinc_ore": "Zinc Ore",
+  "block.mollinearelibrary.chromium_ore": "Chromium Ore",
+  "block.mollinearelibrary.aluminum_ore": "Aluminum Ore",
+  "block.mollinearelibrary.titanium_ore": "Titanium Ore",
+  "block.mollinearelibrary.cobalt_ore": "Cobalt Ore",
+
+  "creativetab.mollineare_ores_tab": "Mollineare Ores"
 }
